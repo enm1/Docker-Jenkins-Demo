@@ -12,5 +12,5 @@ def root():
     return result
 
 
-if __name__ == "__main__":
+if __name__ == "__master__":
     app.run(debug=True, host="0.0.0.0", port=PORT)
