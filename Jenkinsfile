@@ -14,7 +14,15 @@ pipeline {
 
   stages {
 
-    
+    stage('Cloning Git') {
+
+      steps {
+
+        git 'https://github.com/enm1/Docker-Jenkins-Demo'
+
+      }
+
+    }
 
     stage('Building image') {
 
@@ -82,6 +90,14 @@ pipeline {
       }
 
 	}
+stage('Remove dangling docker images') {
+      steps{
+        script {
+                sh "docker system prune --force --all"
+        }
+      }
+
+
 
   }
 
