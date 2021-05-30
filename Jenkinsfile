@@ -8,21 +8,7 @@ pipeline {
 
     dockerImage = ''
 
-  }
 
-  agent any
-
-  stages {
-
-    stage('Cloning Git') {
-
-      steps {
-
-        git 'https://github.com/enm1/Docker-Jenkins-Demo'
-
-      }
-
-    }
 
     stage('Building image') {
 
